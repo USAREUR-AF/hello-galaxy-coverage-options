@@ -5,7 +5,7 @@ kind     sensor
 by       tessaline
 date     2026-10-02
 note     "Pulse-Doppler radar with its own tracker. Version 3.2 is the fielded version; 4.0 is announced in release plan RP-24."
-contact  service@tessaline.internal   # boundary-allow: a notional .internal address
+contact  service@tessaline.example
 
 emits    asterix-cat048  version=3.2  transport=udp  port=8600  status=proven  evidence=evidence/fat-tr40-0311.md  sample=evidence/captures/tr40-plot-0311.hex
 emits    asterix-cat062  version=3.2  transport=udp  port=8601  status=proven  evidence=evidence/fat-tr40-0311.md  sample=evidence/captures/tr40-track-0311.hex
