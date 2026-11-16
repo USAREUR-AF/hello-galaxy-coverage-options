@@ -1,0 +1,7 @@
+record   1
+name     "Range radar"
+kind     sensor
+by       trials-cell
+date     2026-11-10
+
+emits    asterix-cat062  transport=udp  status=available

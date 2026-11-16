@@ -1,0 +1,82 @@
+{
+ "what": "a conversion run with the goat-transformers Python engine, for a proven claim",
+ "claim": {
+  "system": "velmora/fabric-bridge",
+  "store": "stores/velmora",
+  "file": "systems/fabric-bridge.rec",
+  "line": 13,
+  "by": "velmora"
+ },
+ "from": "cot-xml",
+ "to": "geojson",
+ "sample": "evidence/captures/ax26-cot-0927.xml",
+ "sample_sha256": "64c80b2f63c8828c4a40dd8bc30b220de7bf9d0e731b5256d4f575639df11e7a",
+ "set": {},
+ "output": "{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[-30.2712,44.6188,95]},\"properties\":{\"type\":\"a-u-A-M-F-Q\",\"time_ms\":1790514211000,\"how\":\"m-g\",\"ce\":25,\"le\":40,\"callsign\":\"N1-0042\",\"course\":302.5,\"speed_ms\":12.9},\"id\":\"VEL-N1-0042\"}",
+ "keys_in": [
+  "callsign",
+  "ce",
+  "course",
+  "hae",
+  "how",
+  "lat",
+  "le",
+  "lon",
+  "speed_ms",
+  "stale_ms",
+  "time_ms",
+  "track.scoped_id",
+  "type",
+  "uid"
+ ],
+ "keys_out": [
+  "callsign",
+  "ce",
+  "course",
+  "hae",
+  "how",
+  "lat",
+  "le",
+  "lon",
+  "speed_ms",
+  "time_ms",
+  "type",
+  "uid"
+ ],
+ "carried": [
+  "callsign",
+  "ce",
+  "course",
+  "hae",
+  "how",
+  "lat",
+  "le",
+  "lon",
+  "speed_ms",
+  "time_ms",
+  "type",
+  "uid"
+ ],
+ "supplied": [],
+ "capability": {
+  "grade": "partial",
+  "carried": [
+   "uid",
+   "type",
+   "time_ms",
+   "how",
+   "lat",
+   "lon",
+   "hae",
+   "ce",
+   "le",
+   "callsign",
+   "course",
+   "speed_ms"
+  ],
+  "dropped": [
+   "track.scoped_id",
+   "stale_ms"
+  ]
+ }
+}

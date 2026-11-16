@@ -1,0 +1,11 @@
+record   1
+system   tessaline/tr-40
+name     "TR-40 radar"
+kind     sensor
+by       velmora
+date     2026-10-21
+note     "Velmora's record of the TR-40 units it holds, which run version 3.1. Written beside Tessaline's own record."
+
+emits    asterix-cat048  version=3.1  transport=udp  status=proven     evidence=evidence/exercise-ax26.md  sample=evidence/captures/ax26-plot-0927.hex
+emits    asterix-cat062  version=3.1  transport=udp  status=available  evidence=evidence/exercise-ax26.md  note="exercise AX-26: tracks dropped above 60 targets; the vendor's fix in 3.2 not yet received"
+emits    sapient         version=4.0  status=unknown  note="announced by the vendor; no delivery date given to Velmora"

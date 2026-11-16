@@ -1,0 +1,22 @@
+record   1
+site     ridge-camp
+name     "Ridge camp, a Velmora forward camp"
+by       velmora
+date     2026-11-04
+note     "One sensor node (N1): a decoder per sensor, then a translator. The library is on the node."
+
+have     tessaline/tr-40
+have     tessaline/eo-7
+have     tessaline/rf-9
+have     tessaline/jx-2
+have     velmora/node-decoder-eo7
+have     velmora/node-decoder-rf9
+have     velmora/node-decoder-tr40
+have     velmora/node-translator
+have     velmora/c2-air
+have     velmora/map-display
+have     goat-transformers
+
+feed     velmora/map-display
+feed     velmora/c2-air       from=tessaline/tr-40
+feed     tessaline/jx-2       from=tessaline/rf-9

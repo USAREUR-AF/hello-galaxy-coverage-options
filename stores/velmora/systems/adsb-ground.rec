@@ -1,0 +1,9 @@
+record   1
+system   velmora/adsb-ground
+name     "Velmora ADS-B ground station"
+kind     sensor
+by       velmora
+date     2026-10-20
+
+emits    asterix-cat021  version=2.6  transport=udp  status=proven  evidence=evidence/flight-log-0605.md  sample=evidence/captures/adsb-ground-0605.hex
+emits    adsb            version=2.6  transport=udp  status=available  note="raw 1090 MHz extended squitter frames"

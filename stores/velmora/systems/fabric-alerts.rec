@@ -1,0 +1,10 @@
+record   1
+system   velmora/fabric-alerts
+name     "Depot lake fabric application: alerts"
+kind     "fabric application"
+by       velmora
+date     2026-10-20
+topic    "alerts/**"
+
+accepts  sapient               transport=zenoh  status=available
+emits    "velmora alert json"  transport=zenoh  status=available

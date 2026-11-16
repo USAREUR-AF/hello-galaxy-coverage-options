@@ -1,0 +1,11 @@
+record   1
+system   velmora/node-decoder-rf9
+name     "Ridge camp sensor node N1, decoder for the RF-9"
+kind     decoder
+by       velmora
+date     2026-10-20
+note     "Written against the interface document; not yet run against an RF-9."
+
+accepts  "tessaline rf-9 json"  transport=udp    status=available
+emits    canonical-track-v2     transport=zenoh  status=available
+converts "tessaline rf-9 json"  canonical-track-v2  status=available

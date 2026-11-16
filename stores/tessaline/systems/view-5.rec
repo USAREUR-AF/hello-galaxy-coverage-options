@@ -1,0 +1,11 @@
+record   1
+system   tessaline/view-5
+name     "Tessaline VIEW-5 operator display"
+kind     display
+by       tessaline
+date     2026-10-02
+note     "Display sold with the TR-40 and EO-7."
+
+accepts  asterix-cat062  version=5.0  transport=udp  status=available
+accepts  sapient         version=5.0  transport=tcp  status=available
+accepts  cot-xml         version=5.0  transport=udp  status=available

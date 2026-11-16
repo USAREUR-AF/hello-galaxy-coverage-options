@@ -1,0 +1,11 @@
+record   1
+system   velmora/node-decoder-eo7
+name     "Ridge camp sensor node N1, decoder for the EO-7"
+kind     decoder
+by       velmora
+date     2026-10-20
+note     "One decoder per sensor on the node. Reads the camera's own JSON and writes Canonical Track v2 for the node's translator."
+
+accepts  "tessaline eo-7 json"  transport=udp    status=proven  evidence=evidence/bench-n1-0412.md  sample=evidence/captures/n1-eo7-input-0412.json
+emits    canonical-track-v2     transport=zenoh  status=proven  evidence=evidence/bench-n1-0412.md  sample=evidence/captures/n1-eo7-track-0412.json
+converts "tessaline eo-7 json"  canonical-track-v2  status=proven  evidence=evidence/bench-n1-0412.md  sample=evidence/captures/n1-eo7-track-0412.json

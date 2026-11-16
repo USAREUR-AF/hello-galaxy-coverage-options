@@ -1,0 +1,10 @@
+record   1
+system   kastreni/interceptor
+name     "Kastreni short-range interceptor launcher"
+kind     effector
+by       kastreni
+date     2026-11-02
+
+accepts  sapient             transport=tcp    status=available  note="task messages"
+accepts  canonical-track-v2  transport=zenoh  status=unknown
+accepts  "kastreni fire control binary"  transport=serial  status=proven  evidence=evidence/td-he-0814.md  sample=evidence/captures/fc-0814.hex

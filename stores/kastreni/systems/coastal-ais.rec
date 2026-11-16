@@ -1,0 +1,10 @@
+record   1
+system   kastreni/coastal-ais
+name     "Kastreni coastal AIS station"
+kind     sensor
+by       kastreni
+date     2026-11-02
+note     "Taken from the station's equipment list, which names the formats and not the direction."
+
+speaks   nmea0183-ais
+speaks   nmea2000

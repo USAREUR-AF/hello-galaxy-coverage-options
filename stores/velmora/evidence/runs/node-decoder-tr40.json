@@ -1,0 +1,98 @@
+{
+ "what": "a conversion run with the goat-transformers Python engine, for a proven claim",
+ "claim": {
+  "system": "velmora/node-decoder-tr40",
+  "store": "stores/velmora",
+  "file": "systems/node-decoder-tr40.rec",
+  "line": 11,
+  "by": "velmora"
+ },
+ "from": "asterix-cat062",
+ "to": "canonical-track-v2",
+ "sample": "evidence/captures/ax26-track-0927.hex",
+ "sample_sha256": "0e6147a4314de75be728f63901c208c1f28da37942162cae79d61c8b883270b9",
+ "set": {
+  "uid": "n1-tr40-2210",
+  "track.source_id": "velmora-n1-tr40",
+  "track.generation": "gen-1",
+  "time_ms": "1790514091250"
+ },
+ "output": "{\"apiVersion\":\"billie.dev/track-v2\",\"kind\":\"Track\",\"trackId\":\"n1-tr40-2210\",\"sourceId\":\"velmora-n1-tr40\",\"trackGeneration\":\"gen-1\",\"simulated\":false,\"confirmed\":true,\"coasting\":false,\"finalUpdate\":false,\"observedAt\":\"2026-09-27T13:01:31.250Z\",\"position\":{\"latitudeDeg\":44.59869861602783,\"longitudeDeg\":-30.330199599266052,\"altitudeM\":609.6},\"velocity\":{\"eastMps\":14,\"northMps\":-3.5}}",
+ "keys_in": [
+  "cat062.cnf",
+  "cat062.cst",
+  "cat062.mon",
+  "cat062.sac",
+  "cat062.sic",
+  "cat062.sim",
+  "cat062.time_of_day_s",
+  "cat062.track_number",
+  "cat062.tse",
+  "hae",
+  "lat",
+  "lon",
+  "track.coasting",
+  "track.confirmed",
+  "track.final_update",
+  "track.simulated",
+  "track.vel_east_ms",
+  "track.vel_north_ms"
+ ],
+ "keys_out": [
+  "hae",
+  "lat",
+  "lon",
+  "time_ms",
+  "track.coasting",
+  "track.confirmed",
+  "track.final_update",
+  "track.generation",
+  "track.simulated",
+  "track.source_id",
+  "track.vel_east_ms",
+  "track.vel_north_ms",
+  "uid"
+ ],
+ "carried": [
+  "hae",
+  "lat",
+  "lon",
+  "track.coasting",
+  "track.confirmed",
+  "track.final_update",
+  "track.simulated",
+  "track.vel_east_ms",
+  "track.vel_north_ms"
+ ],
+ "supplied": [
+  "time_ms",
+  "track.generation",
+  "track.source_id",
+  "uid"
+ ],
+ "capability": {
+  "grade": "partial",
+  "carried": [
+   "lat",
+   "lon",
+   "track.vel_east_ms",
+   "track.vel_north_ms",
+   "track.confirmed",
+   "track.simulated",
+   "track.final_update",
+   "track.coasting",
+   "hae"
+  ],
+  "dropped": [
+   "cat062.sac",
+   "cat062.sic",
+   "cat062.time_of_day_s",
+   "cat062.track_number",
+   "cat062.mon",
+   "cat062.cnf",
+   "cat062.sim",
+   "cat062.tse",
+   "cat062.cst"
+  ]
+ }
+}

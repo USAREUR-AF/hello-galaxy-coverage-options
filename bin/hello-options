@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+# hello-options — fetch goat-transformers and run a stage.
+#
+#   bin/hello-options fetch            goat-transformers at the pinned commit, into .cache/
+#   bin/hello-options prove            check every proven claim (tools/prove.py)
+#   bin/hello-options <stage>          run one stage: a number (3) or a name (03-evidence)
+#   bin/hello-options all              prove, then every stage in order
+#   bin/hello-options list
+#   bin/hello-options clean            remove .run/ and .cache/
+set -uo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+STAGES="$ROOT/stages"
+usage() {
+  cat <<USAGE
+hello-galaxy-coverage-options — system records and goat-options, on notional data
+
+usage:
+  bin/hello-options fetch | prove | all | list | clean | <stage>
+
+stages:
+USAGE
+  for d in "$STAGES"/*/; do
+    printf '  %-22s %s\n' "$(basename "$d")" "$(sed -n 's/^# *//p' "$d/README.md" 2>/dev/null | head -1)"
+  done
+}
+resolve() {
+  local q="$1" m
+  [ -d "$STAGES/$q" ] && { echo "$q"; return 0; }
+  case "$q" in [0-9]) q="0$q" ;; esac
+  for d in "$STAGES"/*/; do
+    m="$(basename "$d")"
+    case "$m" in "$q"-*|*"$q"*) echo "$m"; return 0 ;; esac
+  done
+  return 1
+}
+[ "$#" -eq 0 ] && { usage; exit 0; }
+case "$1" in
+  -h|--help|help) usage; exit 0 ;;
+  list) for d in "$STAGES"/*/; do basename "$d"; done; exit 0 ;;
+  fetch) exec "$ROOT/tools/fetch-goat-transformers.sh" ;;
+  prove) exec python3 -I "$ROOT/tools/prove.py" ;;
+  clean) rm -rf "$ROOT/.run" "$ROOT/.cache"; echo "removed .run/ and .cache/"; exit 0 ;;
+  all)
+    rc=0
+    python3 -I "$ROOT/tools/prove.py" || rc=1
+    for d in "$STAGES"/*/; do python3 -I "$d/run.py" || rc=1; done
+    exit $rc ;;
+esac
+name="$(resolve "$1")" || { echo "unknown stage: $1" >&2; usage >&2; exit 2; }
+exec python3 -I "$STAGES/$name/run.py"

@@ -1,0 +1,12 @@
+record   1
+system   velmora/c2-air
+name     "Velmora air defense command application"
+kind     "command application"
+by       velmora
+date     2026-10-20
+note     "Version 5.1 is fielded."
+
+accepts  asterix-cat062  version=5.1  transport=udp  status=proven  evidence=evidence/exercise-ax26.md  sample=evidence/captures/ax26-track-0927.hex
+accepts  cot-xml         version=5.1  transport=udp  status=available
+accepts  "stanag 4607"   version=5.1  transport=udp  status=unknown  note="ground moving target reports; interface document requested"
+emits    cot-xml         version=5.1  transport=udp  status=available  note="engagement orders as tasking events"

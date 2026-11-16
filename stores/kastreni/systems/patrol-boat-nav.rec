@@ -1,0 +1,9 @@
+record   1
+system   kastreni/patrol-boat-nav
+name     "Patrol boat navigation gateway"
+kind     gateway
+by       kastreni
+date     2026-11-02
+note     "Bridges the boat's NMEA 2000 bus to the harbor network."
+
+emits    nmea2000  transport=can  status=proven  evidence=evidence/boat-0730.md  sample=evidence/captures/boat-position-0730.hex  bus="NMEA 2000 backbone"

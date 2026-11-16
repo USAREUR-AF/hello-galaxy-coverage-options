@@ -1,0 +1,74 @@
+{
+ "what": "a conversion run with the goat-transformers Python engine, for a proven claim",
+ "claim": {
+  "system": "kastreni/fabric-picture",
+  "store": "stores/kastreni",
+  "file": "systems/fabric-picture.rec",
+  "line": 12,
+  "by": "kastreni"
+ },
+ "from": "asterix-cat062",
+ "to": "geojson",
+ "sample": "evidence/captures/edge-cat062-0802.hex",
+ "sample_sha256": "7450a3ea433f2e8c5c8f7a33e89a736f51651ab01dc0e389ea04f7fcead139da",
+ "set": {},
+ "output": "{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[-30.08610248565674,44.44149971008301,1520.19]},\"properties\":{\"course\":74.68454880308154,\"speed_ms\":124.93698411599345}}",
+ "keys_in": [
+  "cat062.cnf",
+  "cat062.cst",
+  "cat062.mon",
+  "cat062.sac",
+  "cat062.sic",
+  "cat062.sim",
+  "cat062.time_of_day_s",
+  "cat062.track_number",
+  "cat062.tse",
+  "hae",
+  "lat",
+  "lon",
+  "track.coasting",
+  "track.confirmed",
+  "track.final_update",
+  "track.simulated",
+  "track.vel_east_ms",
+  "track.vel_north_ms"
+ ],
+ "keys_out": [
+  "course",
+  "hae",
+  "lat",
+  "lon",
+  "speed_ms"
+ ],
+ "carried": [
+  "hae",
+  "lat",
+  "lon"
+ ],
+ "supplied": [],
+ "capability": {
+  "grade": "partial",
+  "carried": [
+   "lat",
+   "lon",
+   "hae"
+  ],
+  "dropped": [
+   "cat062.sac",
+   "cat062.sic",
+   "cat062.time_of_day_s",
+   "track.vel_east_ms",
+   "track.vel_north_ms",
+   "cat062.track_number",
+   "cat062.mon",
+   "cat062.cnf",
+   "track.confirmed",
+   "cat062.sim",
+   "track.simulated",
+   "cat062.tse",
+   "track.final_update",
+   "cat062.cst",
+   "track.coasting"
+  ]
+ }
+}

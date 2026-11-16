@@ -1,0 +1,20 @@
+record   1
+site     depot-lake
+name     "Depot lake, a Velmora rear site with a Zenoh data fabric"
+by       velmora
+date     2026-11-04
+note     "Applications on the fabric; a Kastreni liaison cell brings its own command application."
+
+have     velmora/fabric-tracks
+have     velmora/fabric-alerts
+have     velmora/fabric-bridge
+have     velmora/uas-gcs
+have     velmora/adsb-ground
+have     velmora/map-display
+have     kastreni/air-c2
+have     velmora/weather-mast
+have     goat-transformers
+
+feed     velmora/fabric-tracks
+feed     kastreni/air-c2
+feed     velmora/map-display       from=velmora/uas-gcs

@@ -1,0 +1,15 @@
+record   1
+system   kastreni/binary-decoder
+name     "Harbor east binary decoder"
+kind     decoder
+by       kastreni
+date     2026-11-02
+note     "Decodes fixed-layout binary messages from a dictionary written from each interface document, and publishes one record per message."
+
+accepts  "kastreni lr-5 binary"   transport=udp     status=proven  evidence=evidence/bench-bd-0907.md  sample=evidence/captures/bd-lr5-0907.hex
+accepts  "tessaline ha-3 binary"  transport=serial  status=available  dictionary=dictionaries/ha-3-v2
+converts "kastreni lr-5 binary"   geojson  status=proven     evidence=evidence/bench-bd-0907.md  sample=evidence/captures/bd-lr5-decoded-0907.geojson  dictionary=dictionaries/lr-5-v3
+converts "kastreni lr-5 binary"   cot-xml  status=available  dictionary=dictionaries/lr-5-v3
+converts "tessaline ha-3 binary"  geojson  status=available  dictionary=dictionaries/ha-3-v2  note="dictionary written from TI-ICD-0207; no HA-3 at the bench yet"
+emits    geojson  transport=zenoh  status=proven  evidence=evidence/bench-bd-0907.md  sample=evidence/captures/bd-lr5-decoded-0907.geojson
+emits    cot-xml  transport=udp    status=available

@@ -1,0 +1,13 @@
+record   1
+system   velmora/node-translator
+name     "Ridge camp sensor node N1, translator"
+kind     translator
+by       velmora
+date     2026-10-20
+note     "Subscribes to Canonical Track v2 from the node's decoders and publishes each consumer's format. Uses the goat-transformers library."
+
+accepts  canonical-track-v2  transport=zenoh  status=proven  evidence=evidence/bench-n1-0412.md  sample=evidence/captures/n1-eo7-track-0412.json
+emits    cot-xml             transport=udp    status=proven  evidence=evidence/exercise-ax26.md  sample=evidence/captures/ax26-cot-0927.xml
+emits    sapient             transport=tcp    status=available
+converts canonical-track-v2  cot-xml  via=goat-transformers  status=proven  evidence=evidence/runs/node-translator-cot.json  sample=evidence/captures/n1-eo7-track-0412.json
+converts canonical-track-v2  sapient  via=goat-transformers  status=available

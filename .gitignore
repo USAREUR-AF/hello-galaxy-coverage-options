@@ -1,0 +1,10 @@
+# goat-transformers at the pinned commit, fetched by tools/fetch-goat-transformers.sh
+.cache/
+# what the stages write: copies, a private store, needle lists — never committed
+.run/
+# python
+__pycache__/
+*.pyc
+.venv/
+# os noise
+.DS_Store

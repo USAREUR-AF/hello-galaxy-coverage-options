@@ -1,0 +1,21 @@
+record   1
+site     harbor-east
+name     "Harbor east, a Kastreni harbor site"
+by       kastreni
+date     2026-11-04
+note     "An edge gateway captures every feed; a binary decoder reads the national radar. The goat-transformers library is not deployed here."
+
+have     kastreni/lr-5
+have     kastreni/edge-capture
+have     kastreni/binary-decoder
+have     kastreni/coastal-ais
+have     kastreni/patrol-boat-nav
+have     kastreni/tactical-display
+have     kastreni/fabric-picture
+have     kastreni/interceptor
+have     velmora/harbor-ais
+have     tessaline/ha-3
+
+feed     kastreni/tactical-display
+feed     kastreni/fabric-picture   from=kastreni/lr-5
+feed     kastreni/edge-capture     from=velmora/harbor-ais

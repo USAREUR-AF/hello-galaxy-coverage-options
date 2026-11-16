@@ -1,0 +1,12 @@
+record   1
+system   kastreni/fabric-picture
+name     "Harbor east fabric application: common picture"
+kind     "fabric application"
+by       kastreni
+date     2026-11-02
+note     "Runs on the harbor's Zenoh fabric. Draws one picture from every feed the edge gateway republishes."
+
+accepts  geojson         transport=zenoh  status=proven     evidence=evidence/bench-bd-0907.md  sample=evidence/captures/bd-lr5-decoded-0907.geojson
+accepts  asterix-cat062  transport=zenoh  status=available
+accepts  cot-xml         transport=zenoh  status=available
+converts asterix-cat062  geojson  via=goat-transformers  status=proven  evidence=evidence/runs/fabric-picture-geojson.json  sample=evidence/captures/edge-cat062-0802.hex

@@ -1,0 +1,10 @@
+record   1
+system   kastreni/lr-5
+name     "Kastreni LR-5 long-range surveillance radar"
+kind     sensor
+by       kastreni
+date     2026-11-02
+note     "National radar. Its output format is defined by interface document KR-ICD-115 only."
+
+emits    "kastreni lr-5 binary"  version=3  transport=udp  status=proven  evidence=evidence/bench-bd-0907.md  sample=evidence/captures/bd-lr5-0907.hex  icd=KR-ICD-115
+emits    asterix-cat062          version=4  transport=udp  status=unknown  note="an upgrade has been discussed; no plan"

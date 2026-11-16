@@ -1,0 +1,11 @@
+record   1
+system   velmora/node-decoder-tr40
+name     "Ridge camp sensor node N1, decoder for the TR-40"
+kind     decoder
+by       velmora
+date     2026-10-20
+note     "Uses the goat-transformers library. ASTERIX Category 062 carries no track identifier or source of the form Canonical Track v2 requires, so the decoder sets them per message."
+
+accepts  asterix-cat062       transport=udp    status=proven  evidence=evidence/exercise-ax26.md  sample=evidence/captures/ax26-track-0927.hex
+emits    canonical-track-v2   transport=zenoh  status=available
+converts asterix-cat062  canonical-track-v2  via=goat-transformers  status=proven  evidence=evidence/runs/node-decoder-tr40.json  sample=evidence/captures/ax26-track-0927.hex  set="uid=n1-tr40-2210,track.source_id=velmora-n1-tr40,track.generation=gen-1,time_ms=1790514091250"

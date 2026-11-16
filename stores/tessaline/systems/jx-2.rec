@@ -1,0 +1,11 @@
+record   1
+system   tessaline/jx-2
+name     "Tessaline JX-2 radio frequency effector"
+kind     effector
+by       tessaline
+date     2026-10-02
+note     "Directional radio frequency effector. Takes a cue and a task; reports its status."
+
+accepts  sapient   version=1.8  transport=tcp  status=available  note="task and alert messages"
+accepts  cot-xml   version=2.0  transport=udp  status=forthcoming  evidence=evidence/rp-24-release-plan.md
+emits    sapient   version=1.8  transport=tcp  status=available  note="status reports"

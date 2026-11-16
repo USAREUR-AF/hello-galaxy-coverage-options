@@ -1,0 +1,13 @@
+record   1
+system   velmora/fabric-bridge
+name     "Depot lake fabric bridge"
+kind     translator
+by       velmora
+date     2026-10-20
+note     "Reads Cursor-on-Target from the local network and puts it on the fabric. Uses the goat-transformers library."
+
+accepts  cot-xml       transport=udp    status=proven  evidence=evidence/exercise-ax26.md  sample=evidence/captures/ax26-cot-0927.xml
+emits    cot-protobuf  transport=zenoh  status=available
+emits    geojson       transport=zenoh  status=available
+converts cot-xml  cot-protobuf  via=goat-transformers  status=proven  evidence=evidence/runs/fabric-bridge-cot-protobuf.json  sample=evidence/captures/ax26-cot-0927.xml
+converts cot-xml  geojson       via=goat-transformers  status=proven  evidence=evidence/runs/fabric-bridge-geojson.json  sample=evidence/captures/ax26-cot-0927.xml

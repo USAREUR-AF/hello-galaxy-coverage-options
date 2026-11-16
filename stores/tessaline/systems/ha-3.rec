@@ -1,0 +1,10 @@
+record   1
+system   tessaline/ha-3
+name     "Tessaline HA-3 acoustic array"
+kind     sensor
+by       tessaline
+date     2026-10-02
+note     "Ground acoustic array. Version 2 has a binary output over a serial line only."
+
+emits    "tessaline ha-3 binary"  version=2  transport=serial  status=available  icd=TI-ICD-0207
+emits    sapient                  version=3  transport=tcp     status=forthcoming  evidence=evidence/rp-24-release-plan.md

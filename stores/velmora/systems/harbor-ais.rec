@@ -1,0 +1,9 @@
+record   1
+system   velmora/harbor-ais
+name     "Velmora AIS shore receiver"
+kind     sensor
+by       velmora
+date     2026-10-20
+note     "Lent to the Kastreni harbor east site."
+
+emits    "NMEA 0183 AIS"  transport=udp  status=available  note="AIVDM sentences"

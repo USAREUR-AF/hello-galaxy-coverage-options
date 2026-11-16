@@ -1,0 +1,11 @@
+record   1
+system   velmora/map-display
+name     "Velmora handheld map display"
+kind     display
+by       velmora
+date     2026-10-20
+
+accepts  cot-xml       version=4.10  transport=udp    status=proven  evidence=evidence/exercise-ax26.md  sample=evidence/captures/ax26-cot-0927.xml
+accepts  geojson       version=4.10  transport=zenoh  status=available
+accepts  cot-protobuf  version=4.10  transport=zenoh  status=available
+emits    cot-xml       version=4.10  transport=udp    status=available  note="own position"

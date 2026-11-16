@@ -1,0 +1,12 @@
+record   1
+system   velmora/fabric-tracks
+name     "Depot lake fabric application: track picture"
+kind     "fabric application"
+by       velmora
+date     2026-10-20
+note     "Runs on the Zenoh data fabric at depot lake. Keeps the latest state of every track and serves it to web views."
+topic    "tracks/**"
+
+accepts  canonical-track-v2  transport=zenoh  status=proven  evidence=evidence/bench-n1-0412.md  sample=evidence/captures/n1-eo7-track-0412.json
+accepts  cot-protobuf        transport=zenoh  status=available
+emits    geojson             transport=zenoh  status=available

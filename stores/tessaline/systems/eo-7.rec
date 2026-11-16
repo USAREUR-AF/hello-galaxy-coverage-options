@@ -1,0 +1,12 @@
+record   1
+system   tessaline/eo-7
+name     "Tessaline EO-7 electro-optical and infrared camera"
+kind     sensor
+by       tessaline
+date     2026-10-02
+note     "Pan-tilt camera with on-board detection. Reports detections, and accepts slew-to-cue tasks."
+
+emits    sapient                 version=2.1  transport=tcp  status=proven  evidence=evidence/bench-eo7-0412.md  sample=evidence/captures/eo7-detection-0412.hex
+emits    "tessaline eo-7 json"   version=2.1  transport=udp  status=available  icd=TI-ICD-0311
+accepts  sapient                 version=2.1  transport=tcp  status=available  note="task messages: slew, zoom, track"
+accepts  cot-xml                 version=3.0  transport=udp  status=forthcoming  evidence=evidence/rp-24-release-plan.md  note="slew to a cued position"

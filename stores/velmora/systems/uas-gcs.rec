@@ -1,0 +1,10 @@
+record   1
+system   velmora/uas-gcs
+name     "Velmora small uncrewed aircraft ground control station"
+kind     "ground control station"
+by       velmora
+date     2026-10-20
+
+emits    mavlink2  version=2.3  transport=udp  status=available  note="commands and mission uploads"
+accepts  mavlink2  version=2.3  transport=udp  status=proven  evidence=evidence/flight-log-0605.md  sample=evidence/captures/gcs-position-0605.hex  note="aircraft telemetry"
+emits    cot-xml   version=2.3  transport=udp  status=available  note="through a plug-in that is not fielded"

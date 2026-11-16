@@ -1,0 +1,10 @@
+record   1
+system   tessaline/rf-9
+name     "Tessaline RF-9 radio frequency detector"
+kind     sensor
+by       tessaline
+date     2026-10-02
+note     "Passive detector for small uncrewed aircraft. Decodes broadcast remote identification and reports emitters it cannot decode."
+
+emits    remote-id               version=1.4  transport=udp  status=proven  evidence=evidence/bench-rf9-0419.md  sample=evidence/captures/rf9-location-0419.hex
+emits    "tessaline rf-9 json"   version=1.4  transport=udp  status=available  icd=TI-ICD-0290  note="emitters without remote identification, with bearing only"

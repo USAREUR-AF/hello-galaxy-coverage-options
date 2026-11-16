@@ -1,0 +1,21 @@
+record   1
+system   kastreni/edge-capture
+name     "Harbor east edge capture gateway"
+kind     "edge gateway"
+by       kastreni
+date     2026-11-02
+note     "Listens to the feeds on the harbor network, records every message, and republishes each feed unchanged on the harbor's Zenoh fabric. It converts nothing."
+retention "72 hours of every feed"
+
+accepts  asterix-cat048   transport=udp  status=proven  evidence=evidence/edge-he-0802.md  sample=evidence/captures/edge-cat048-0802.hex
+accepts  asterix-cat062   transport=udp  status=proven  evidence=evidence/edge-he-0802.md  sample=evidence/captures/edge-cat062-0802.hex
+accepts  asterix-cat021   transport=udp  status=available
+accepts  cot-xml          transport=udp  status=available
+accepts  nmea0183-ais     transport=udp  status=available
+accepts  "kastreni lr-5 binary"  transport=udp  status=available
+emits    asterix-cat048   transport=zenoh  status=proven  evidence=evidence/edge-he-0802.md  sample=evidence/captures/edge-cat048-0802.hex
+emits    asterix-cat062   transport=zenoh  status=proven  evidence=evidence/edge-he-0802.md  sample=evidence/captures/edge-cat062-0802.hex
+emits    asterix-cat021   transport=zenoh  status=available
+emits    cot-xml          transport=zenoh  status=available
+emits    nmea0183-ais     transport=zenoh  status=available
+emits    "kastreni lr-5 binary"  transport=zenoh  status=available

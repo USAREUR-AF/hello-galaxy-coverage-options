@@ -1,0 +1,10 @@
+record   1
+system   kastreni/air-c2
+name     "Kastreni air picture command application"
+kind     "command application"
+by       kastreni
+date     2026-11-02
+
+accepts  asterix-cat062  transport=udp    status=proven  evidence=evidence/edge-he-0802.md  sample=evidence/captures/edge-cat062-0802.hex
+accepts  cot-protobuf    transport=zenoh  status=available
+accepts  nvg             transport=tcp    status=available

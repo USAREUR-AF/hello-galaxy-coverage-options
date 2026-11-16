@@ -1,0 +1,10 @@
+record   1
+system   trials-cell/mast-camera
+name     "Mast camera at the trials range (first draft)
+kind     sensor
+by       trials-cell
+date     2026-11-10
+
+emits    sapient   status=proven
+emits    cot-xml   status=partly  note="seen on one display only"
+converts sapient   status=available

@@ -1,0 +1,10 @@
+record   1
+system   kastreni/tactical-display
+name     "Kastreni tactical display"
+kind     display
+by       kastreni
+date     2026-11-02
+
+accepts  cot-xml  transport=udp  status=proven  evidence=evidence/td-he-0814.md  sample=evidence/captures/td-cot-0814.xml
+accepts  nvg      transport=tcp  status=proven  evidence=evidence/td-he-0814.md  sample=evidence/captures/td-nvg-0814.xml
+emits    nvg      transport=tcp  status=available  note="overlays drawn by the operator"

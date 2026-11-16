@@ -1,0 +1,10 @@
+record   1
+system   tessaline/eo-7
+name     "EO-7 camera"
+kind     sensor
+by       kastreni
+date     2026-11-03
+note     "Kastreni's record of the EO-7 from trial KX-19. Written beside Tessaline's own record."
+
+emits    sapient  version=2.1  transport=tcp  status=available  evidence=evidence/trial-kx19.md  note="detections received; the classification field was empty in every report"
+accepts  sapient  version=2.1  transport=tcp  status=unknown    note="tasking not tried"

@@ -1,0 +1,84 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  shape:
+    name: scripts, records and structure are well formed
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: shellcheck the scripts
+        run: shellcheck bin/hello-options tools/fetch-goat-transformers.sh
+
+      - name: every stage has a README and an executable run.py
+        run: |
+          rc=0
+          for d in stages/*/; do
+            [ -f "$d/README.md" ] || { echo "missing README: $d"; rc=1; }
+            [ -x "$d/run.py" ]    || { echo "not executable: $d/run.py"; rc=1; }
+          done
+          exit $rc
+
+      - name: python compiles
+        run: |
+          rc=0
+          for f in $(git ls-files '*.py'); do python3 -m py_compile "$f" || rc=1; done
+          exit $rc
+
+      - name: the pinned goat-transformers commit is a full SHA
+        run: grep -Eq '^[0-9a-f]{40}$' GOAT_TRANSFORMERS_REF
+
+  stages:
+    name: fetch goat-transformers at the pinned commit and run every stage
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: fetch goat-transformers
+        run: bin/hello-options fetch
+
+      - name: the samples are what tools/make-captures.py writes
+        run: python3 -I tools/make-captures.py --check
+
+      - name: every proven claim resolves, decodes or runs
+        run: NO_COLOR=1 bin/hello-options prove
+
+      - name: stage 1 — read one record
+        run: NO_COLOR=1 bin/hello-options 1
+
+      - name: stage 2 — ask one question
+        run: NO_COLOR=1 bin/hello-options 2
+
+      - name: stage 3 — read the evidence of a path
+        run: NO_COLOR=1 bin/hello-options 3
+
+      - name: stage 4 — what carries and what is lost
+        run: NO_COLOR=1 bin/hello-options 4
+
+      - name: stage 5 — a site's options
+        run: NO_COLOR=1 bin/hello-options 5
+
+      - name: stage 6 — two owners, merged, disagreeing
+        run: NO_COLOR=1 bin/hello-options 6
+
+      - name: stage 7 — a forthcoming option
+        run: NO_COLOR=1 bin/hello-options 7
+
+      - name: stage 8 — a store that fails check --strict
+        run: NO_COLOR=1 bin/hello-options 8
+
+      - name: stage 9 — your own view
+        run: NO_COLOR=1 bin/hello-options 9
+
+      - name: stage 10 — a private store beside this one
+        run: NO_COLOR=1 bin/hello-options 10
