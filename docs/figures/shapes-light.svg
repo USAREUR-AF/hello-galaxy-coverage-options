@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 760 278" role="img" aria-label="The JSON answer of goat-options is read by four shapes of consumer: a sensor node, an edge capture gateway, a binary decoder and applications on a data fabric"><style>svg{--ink:#191c22; --quiet:#555c68; --rule:#dde1e6; --line:#878f9c; --paper:#ffffff; --panel:#f5f6f8; --accent:#0b5a72; --accent-soft:#e2f0f4; --on-accent:#ffffff; --good:#2a6a35; --good-bg:#e4f3e6; --warn:#875200; --warn-bg:#fcf0d7; --info:#285d9e; --info-bg:#e6eff9; --crit:#b0261d; --crit-bg:#fbeae8; --mute:#5a606a; --mute-bg:#efeeeb; --font:"Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif; --mono:Menlo, Consolas, "Courier New", monospace; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+.t { fill:var(--ink); } .tq { fill:var(--quiet); } .ta { fill:var(--accent); } .tg { fill:var(--good); }
+.tw { fill:var(--warn); } .ti { fill:var(--info); } .tc { fill:var(--crit); } .tm { fill:var(--mute); }
+.ton { fill:var(--on-accent); }
+.bx { fill:var(--paper); stroke:var(--line); stroke-width:1.25; } .bxp { fill:var(--panel); stroke:var(--rule); stroke-width:1.25; }
+.bxa { fill:var(--accent-soft); stroke:var(--accent); stroke-width:1.25; } .bxg { fill:var(--good-bg); stroke:var(--good); stroke-width:1.25; }
+.bxw { fill:var(--warn-bg); stroke:var(--warn); stroke-width:1.25; } .bxi { fill:var(--info-bg); stroke:var(--info); stroke-width:1.25; }
+.bxc { fill:var(--crit-bg); stroke:var(--crit); stroke-width:1.25; } .bxm { fill:var(--mute-bg); stroke:var(--mute); stroke-width:1.25; }
+.bxd { fill:var(--paper); stroke:var(--line); stroke-width:1.25; stroke-dasharray:5 4; }
+.ln { stroke:var(--line); stroke-width:1.25; fill:none; } .lna { stroke:var(--accent); stroke-width:2; fill:none; }
+.lng { stroke:var(--good); stroke-width:2; fill:none; } .lnw { stroke:var(--warn); stroke-width:2; fill:none; }
+.lnd { stroke:var(--line); stroke-width:1.25; fill:none; stroke-dasharray:6 5; }
+.lno { stroke:var(--good); stroke-width:2; fill:none; stroke-dasharray:2 5; stroke-linecap:round; }
+.lnr { stroke:var(--rule); stroke-width:1; fill:none; }
+.lnx { stroke:var(--crit); stroke-width:2; fill:none; stroke-dasharray:3 6; }
+.fa { fill:var(--accent); } .fg { fill:var(--good); } .fl { fill:var(--line); } .fw { fill:var(--warn); }
+.fi { fill:var(--info); } .fc { fill:var(--crit); } .fm { fill:var(--mute); } .fp { fill:var(--panel); }
+.fs { fill:var(--accent-soft); }
+.halo { paint-order:stroke fill; stroke:var(--paper); stroke-width:4px; stroke-linejoin:round; }
+.halo.on-panel { stroke:var(--panel); }</style>
+<text x="20" y="36" class="t" font-size="18" font-weight="700" data-role="title">Four shapes of consumer read the same answer</text>
+<rect x="250" y="56" width="260" height="66" rx="20" class="bxa"/>
+<text x="380" y="82" text-anchor="middle" class="t" font-size="15" font-weight="700">goat-options</text>
+<text x="380" y="104" text-anchor="middle" class="tq" font-size="13">paths as JSON</text>
+<rect x="20" y="162" width="168" height="96" rx="8" class="bx"/>
+<text x="36" y="184" class="t" font-size="15" font-weight="700">Sensor node</text>
+<text x="36" y="206" class="tq" font-size="13">decoders, then</text>
+<text x="36" y="224" class="tq" font-size="13">a translator</text>
+<rect x="204" y="162" width="168" height="96" rx="8" class="bx"/>
+<text x="220" y="184" class="t" font-size="15" font-weight="700">Edge capture</text>
+<text x="220" y="204" class="t" font-size="15" font-weight="700">gateway</text>
+<text x="220" y="226" class="tq" font-size="13">republishes</text>
+<text x="220" y="244" class="tq" font-size="13">every feed</text>
+<rect x="388" y="162" width="168" height="96" rx="8" class="bx"/>
+<text x="404" y="184" class="t" font-size="15" font-weight="700">Binary decoder</text>
+<text x="404" y="206" class="tq" font-size="13">driven by a dictionary</text>
+<rect x="572" y="162" width="168" height="96" rx="8" class="bx"/>
+<text x="588" y="184" class="t" font-size="15" font-weight="700">Fabric</text>
+<text x="588" y="204" class="t" font-size="15" font-weight="700">applications</text>
+<text x="588" y="226" class="tq" font-size="13">on a Zenoh mesh</text>
+<path d="M380 122L380 142" class="ln" data-lint="nohead"/>
+<path d="M104 142L656 142" class="ln" data-lint="nohead"/>
+<path d="M104 142L104 153.25" class="ln"/><path d="M104 161.25L99.5 152.25L108.5 152.25z" class="fl"/>
+<path d="M288 142L288 153.25" class="ln"/><path d="M288 161.25L283.5 152.25L292.5 152.25z" class="fl"/>
+<path d="M472 142L472 153.25" class="ln"/><path d="M472 161.25L467.5 152.25L476.5 152.25z" class="fl"/>
+<path d="M656 142L656 153.25" class="ln"/><path d="M656 161.25L651.5 152.25L660.5 152.25z" class="fl"/>
+</svg>

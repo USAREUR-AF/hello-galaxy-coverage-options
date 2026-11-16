@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 760 248" role="img" aria-label="A proven claim points to an evidence file and a sample message in its owner&#x27;s store; the library decodes the sample or reruns the conversion; the result must equal the kept run file"><style>svg{--ink:#191c22; --quiet:#555c68; --rule:#dde1e6; --line:#878f9c; --paper:#ffffff; --panel:#f5f6f8; --accent:#0b5a72; --accent-soft:#e2f0f4; --on-accent:#ffffff; --good:#2a6a35; --good-bg:#e4f3e6; --warn:#875200; --warn-bg:#fcf0d7; --info:#285d9e; --info-bg:#e6eff9; --crit:#b0261d; --crit-bg:#fbeae8; --mute:#5a606a; --mute-bg:#efeeeb; --font:"Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif; --mono:Menlo, Consolas, "Courier New", monospace; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+.t { fill:var(--ink); } .tq { fill:var(--quiet); } .ta { fill:var(--accent); } .tg { fill:var(--good); }
+.tw { fill:var(--warn); } .ti { fill:var(--info); } .tc { fill:var(--crit); } .tm { fill:var(--mute); }
+.ton { fill:var(--on-accent); }
+.bx { fill:var(--paper); stroke:var(--line); stroke-width:1.25; } .bxp { fill:var(--panel); stroke:var(--rule); stroke-width:1.25; }
+.bxa { fill:var(--accent-soft); stroke:var(--accent); stroke-width:1.25; } .bxg { fill:var(--good-bg); stroke:var(--good); stroke-width:1.25; }
+.bxw { fill:var(--warn-bg); stroke:var(--warn); stroke-width:1.25; } .bxi { fill:var(--info-bg); stroke:var(--info); stroke-width:1.25; }
+.bxc { fill:var(--crit-bg); stroke:var(--crit); stroke-width:1.25; } .bxm { fill:var(--mute-bg); stroke:var(--mute); stroke-width:1.25; }
+.bxd { fill:var(--paper); stroke:var(--line); stroke-width:1.25; stroke-dasharray:5 4; }
+.ln { stroke:var(--line); stroke-width:1.25; fill:none; } .lna { stroke:var(--accent); stroke-width:2; fill:none; }
+.lng { stroke:var(--good); stroke-width:2; fill:none; } .lnw { stroke:var(--warn); stroke-width:2; fill:none; }
+.lnd { stroke:var(--line); stroke-width:1.25; fill:none; stroke-dasharray:6 5; }
+.lno { stroke:var(--good); stroke-width:2; fill:none; stroke-dasharray:2 5; stroke-linecap:round; }
+.lnr { stroke:var(--rule); stroke-width:1; fill:none; }
+.lnx { stroke:var(--crit); stroke-width:2; fill:none; stroke-dasharray:3 6; }
+.fa { fill:var(--accent); } .fg { fill:var(--good); } .fl { fill:var(--line); } .fw { fill:var(--warn); }
+.fi { fill:var(--info); } .fc { fill:var(--crit); } .fm { fill:var(--mute); } .fp { fill:var(--panel); }
+.fs { fill:var(--accent-soft); }
+.halo { paint-order:stroke fill; stroke:var(--paper); stroke-width:4px; stroke-linejoin:round; }
+.halo.on-panel { stroke:var(--panel); }</style>
+<text x="20" y="36" class="t" font-size="18" font-weight="700" data-role="title">A claim is proven only when a run backs it</text>
+<path d="M113 76L211.5 76" class="ln"/><path d="M219.5 76L210.5 80.5L210.5 71.5z" class="fl"/>
+<path d="M257 76L355.5 76" class="ln"/><path d="M363.5 76L354.5 80.5L354.5 71.5z" class="fl"/>
+<path d="M401 76L499.5 76" class="ln"/><path d="M507.5 76L498.5 80.5L498.5 71.5z" class="fl"/>
+<path d="M545 76L643.5 76" class="ln"/><path d="M651.5 76L642.5 80.5L642.5 71.5z" class="fl"/>
+<circle cx="92" cy="76" r="15" class="fa"/>
+<text x="92" y="80.6" text-anchor="middle" class="ton" font-size="13">1</text>
+<text x="92" y="117" text-anchor="middle" class="t" font-size="15" font-weight="700">Claim</text>
+<text x="92" y="139" text-anchor="middle" class="tq" font-size="13">status=proven</text>
+<circle cx="236" cy="76" r="15" class="fa"/>
+<text x="236" y="80.6" text-anchor="middle" class="ton" font-size="13">2</text>
+<text x="236" y="117" text-anchor="middle" class="t" font-size="15" font-weight="700">Evidence file</text>
+<text x="236" y="139" text-anchor="middle" class="tq" font-size="13">in the owner&#x27;s store</text>
+<circle cx="380" cy="76" r="15" class="fa"/>
+<text x="380" y="80.6" text-anchor="middle" class="ton" font-size="13">3</text>
+<text x="380" y="117" text-anchor="middle" class="t" font-size="15" font-weight="700">Sample message</text>
+<text x="380" y="139" text-anchor="middle" class="tq" font-size="13">kept beside it</text>
+<circle cx="524" cy="76" r="15" class="fa"/>
+<text x="524" y="80.6" text-anchor="middle" class="ton" font-size="13">4</text>
+<text x="524" y="117" text-anchor="middle" class="t" font-size="15" font-weight="700">Library run</text>
+<text x="524" y="139" text-anchor="middle" class="tq" font-size="13">decode or convert</text>
+<circle cx="668" cy="76" r="15" class="fg"/>
+<text x="668" y="80.6" text-anchor="middle" class="ton" font-size="13">5</text>
+<text x="668" y="117" text-anchor="middle" class="tg" font-size="15" font-weight="700">Compare</text>
+<text x="668" y="139" text-anchor="middle" class="tq" font-size="13">with the kept run</text>
+<rect x="20" y="166.12" width="720" height="61" rx="8" class="bxp"/>
+<text x="36" y="190.54" class="t" font-size="15" font-weight="700">Checked.</text>
+<text x="128.14" y="190.54" class="t" font-size="14" data-role="statement">tools/prove.py repeats this for all 36 proven</text>
+<text x="128.14" y="210.54" class="t" font-size="14" data-role="statement">claims, and the stage fails if one does not hold.</text>
+</svg>

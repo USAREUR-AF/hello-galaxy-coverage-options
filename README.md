@@ -37,6 +37,11 @@ keeping records of real systems is in
 
 ## The ten stages
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/figures/stages-dark.svg">
+  <img src="docs/figures/stages-light.svg" width="760" alt="The ten stages in order: one record, one question, evidence, carried and lost, sites, two owners, forthcoming, strict check, your own view, private store.">
+</picture>
+
 | Stage | What it shows | Ends by checking |
 |---|---|---|
 | [**1 one record**](stages/01-one-record/) | a record as text, and the same system as the tool reads it from three stores | 9 claims from 2 owners; unknown keywords and attributes kept |
@@ -53,6 +58,11 @@ keeping records of real systems is in
 Each stage prints what it runs and ends with checks that pass or fail; a
 failed check makes the stage exit 1. Each stage's README has the output of a
 run.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/figures/site-dark.svg">
+  <img src="docs/figures/site-light.svg" width="760" alt="At harbor east, which does not have the library, paths through the binary decoder are on hand, paths that need a library step are not, and one AIS feed is lost because its format is named two ways.">
+</picture>
 
 ## Run it
 
@@ -81,6 +91,11 @@ Three owners, each with its own store directory. Every `evidence=` and
 `sample=` path is relative to the owner's directory, so a store copied on its
 own keeps its evidence.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/figures/stores-dark.svg">
+  <img src="docs/figures/stores-light.svg" width="760" alt="A notional vendor and two notional nations each keep their own store of system records; three site files say what is on hand; one query reads all the stores together.">
+</picture>
+
 | Store | Owner | Systems |
 |---|---|---|
 | [`stores/tessaline`](stores/tessaline/) | Tessaline Instruments, a notional vendor | a short-range radar, a camera, a radio frequency detector, an acoustic array, an effector and a display |
@@ -96,6 +111,11 @@ own keeps its evidence.
 | Formats with no pack | 10: the vendors' own JSON and binary formats, a national radar's binary format, NMEA 0183 AIS (written two ways), STANAG 4607, a fire control link and an alert format |
 | Producer and consumer pairs | 466: 25 with a proven path, 289 with an available path at best, 36 unknown at best, 116 with no path |
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/figures/proof-dark.svg">
+  <img src="docs/figures/proof-light.svg" width="760" alt="A proven claim points to an evidence file and a sample message in its owner's store; the library decodes the sample or reruns the conversion, and the result is compared with the kept run.">
+</picture>
+
 The samples under `stores/*/evidence/captures/` are written by
 [`tools/make-captures.py`](tools/make-captures.py): the binary ones are
 encoded by the library from notional values, so a sample decoding is a check
@@ -106,6 +126,11 @@ system sends it. [FINDINGS.md](FINDINGS.md) says more.
 
 The stores hold four shapes of consumer that real open-source projects take.
 The systems here are notional and are not those projects.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/figures/shapes-dark.svg">
+  <img src="docs/figures/shapes-light.svg" width="760" alt="The JSON answer of goat-options is read by four shapes of consumer: a sensor node, an edge capture gateway, a binary decoder and applications on a data fabric.">
+</picture>
 
 | Shape here | Systems | The open-source project of that shape |
 |---|---|---|
