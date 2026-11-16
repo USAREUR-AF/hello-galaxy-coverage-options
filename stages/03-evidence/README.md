@@ -24,7 +24,7 @@ capture only; `tools/prove.py` says so on their line.
 
 ## What you should see
 
-Run against goat-transformers with `fix/options-proving` merged.
+Run against goat-transformers at commit `8845949`.
 
 ```text
 == Stage 3: read the evidence of a path ==

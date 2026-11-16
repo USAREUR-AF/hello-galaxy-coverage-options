@@ -20,7 +20,7 @@ Coverage planning asks which sensors can feed which consumers, and how. The
 answer depends on facts held by many owners: which formats a system emits or
 accepts, in which version, over which transport, and how well that is
 established. A **system record** states those facts for one system, in one
-plain text file. `goat-options` reads records from any number of stores,
+plain text file. `goat-options` reads records from one store or several,
 joins them with the conversions the goat-transformers library can make, and
 lists every path from a producer to a consumer with the status and evidence
 of each step.
@@ -118,15 +118,12 @@ The systems here are notional and are not those projects.
 
 | What | Pin | Change it in |
 |---|---|---|
-| goat-transformers | commit `12a205e881cbdd3dc1295b14bf59ffcdde2081bb`, its `main` with system records and `goat-options` | [`GOAT_TRANSFORMERS_REF`](GOAT_TRANSFORMERS_REF); [`tools/fetch-goat-transformers.sh`](tools/fetch-goat-transformers.sh) fetches it, and CI runs the same script |
+| goat-transformers | commit `88459494943d3075ace87354c0bad160054a9fd9`, its `main` with system records and `goat-options` | [`GOAT_TRANSFORMERS_REF`](GOAT_TRANSFORMERS_REF); [`tools/fetch-goat-transformers.sh`](tools/fetch-goat-transformers.sh) fetches it, and CI runs the same script |
 | GitHub Actions | by commit SHA | [`.github/workflows/`](.github/workflows) |
 
-Stage 4 needs a change to `goat-options` that is not yet in goat-transformers
-`main`: the branch `fix/options-proving`, which adds `needs` to a library step
-(the required keys the source does not supply). Against the pinned commit
-stage 4 fails two checks and says why; the other nine stages and
-`tools/prove.py` pass. When that change merges, put its merge commit in
-`GOAT_TRANSFORMERS_REF`. To run against another checkout:
+Stage 4 uses `needs` on a library step (the required keys the source does not
+supply), which goat-transformers has from commit `8845949` (pull request 11).
+To run against another checkout:
 
 ```bash
 GOAT_TRANSFORMERS_DIR=/path/to/goat-transformers bin/hello-options all

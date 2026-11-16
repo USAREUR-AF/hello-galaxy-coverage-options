@@ -27,7 +27,7 @@ exactly (case and spacing aside); it has no aliases.
 
 ## What you should see
 
-Run against goat-transformers with `fix/options-proving` merged.
+Run against goat-transformers at commit `8845949`.
 
 The files the stage prints first are left out here; they are in the repository.
 

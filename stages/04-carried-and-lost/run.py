@@ -28,7 +28,7 @@ for key in [("asterix-cat048", "cot-protobuf"), ("asterix-cat062", "cot-protobuf
 
 if not any("needs" in s for s in steps.values()):
     h.say("This goat-transformers gives no `needs` on a library step: the two checks on it below need")
-    h.say("goat-transformers with fix/options-proving merged (see README, What is pinned).")
+    h.say("goat-transformers at commit 8845949 or later (see README, What is pinned).")
 
 h.step("Run one: the TR-40's plot (Category 048) to Cursor-on-Target XML")
 eng = Engine.from_dir(os.path.join(h.GT, "packs"), None, "controlled",

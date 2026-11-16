@@ -23,7 +23,7 @@ gives the author and version of each end's claim.
 
 ## What you should see
 
-Run against goat-transformers with `fix/options-proving` merged.
+Run against goat-transformers at commit `8845949`.
 
 ```text
 == Stage 2: ask one question ==

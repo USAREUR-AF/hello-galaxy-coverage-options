@@ -29,7 +29,7 @@ evidence as free text. In this repository `tools/prove.py` does that check
 
 ## What you should see
 
-Run against goat-transformers with `fix/options-proving` merged.
+Run against goat-transformers at commit `8845949`.
 
 ```text
 == Stage 8: a store that fails `check --strict` ==

@@ -26,7 +26,7 @@ To keep a real private store:
 
 ## What you should see
 
-Run against goat-transformers with `fix/options-proving` merged.
+Run against goat-transformers at commit `8845949`.
 
 ```text
 == Stage 10: a private store beside this one ==

@@ -18,7 +18,7 @@ listed, so the same path appears once as `forthcoming` and once as `unknown`.
 
 ## What you should see
 
-Run against goat-transformers with `fix/options-proving` merged.
+Run against goat-transformers at commit `8845949`.
 
 ```text
 == Stage 7: a forthcoming option ==

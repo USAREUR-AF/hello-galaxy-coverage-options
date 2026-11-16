@@ -20,14 +20,13 @@ message. The two can differ, and this stage shows two ways:
 bin/hello-options 4
 ```
 
-**This stage needs goat-transformers with the branch `fix/options-proving`
-merged**: `needs` is part of that change. Against the pinned commit the two
-checks on `needs` fail and the stage says why. See the README's
+This stage uses `needs` on a library step, which goat-transformers has from
+commit `8845949` (pull request 11). See the README's
 [What is pinned](../../README.md#what-is-pinned).
 
 ## What you should see
 
-Run against goat-transformers with `fix/options-proving` merged.
+Run against goat-transformers at commit `8845949`.
 
 ```text
 == Stage 4: what carries and what is lost ==

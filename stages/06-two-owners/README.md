@@ -20,7 +20,7 @@ the paths are the same.
 
 ## What you should see
 
-Run against goat-transformers with `fix/options-proving` merged.
+Run against goat-transformers at commit `8845949`.
 
 ```text
 == Stage 6: two owners, merged, disagreeing ==

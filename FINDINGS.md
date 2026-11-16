@@ -1,8 +1,8 @@
 # Findings — what proving it out showed
 
 Status: Measured. Every finding below was seen in a run of this repository
-against goat-transformers `main` (`12a205e`) or the branch
-`fix/options-proving` (`d8c86af`), and each names the record, file or command
+against goat-transformers at commit `12a205e` (before the fixes of section 3)
+or `8845949` (with them), and each names the record, file or command
 that shows it. Commands run from the repository root; `S` stands for
 `--store stores/tessaline --store stores/velmora --store stores/kastreni`.
 
@@ -17,12 +17,12 @@ written by real owners.
 |---|---|
 | Worked as designed | 7 |
 | The format could not express it | 9 |
-| The tool got it wrong or made it awkward, fixed on `fix/options-proving` | 5 |
+| The tool got it wrong or made it awkward, fixed in goat-transformers pull request 11 | 5 |
 | The tool or the library made it awkward, not fixed | 7 |
 
-The fixes are in goat-transformers, local branch `fix/options-proving`,
-commit `d8c86af`, with tests (26 pass). Stage 4 needs them; the other stages
-pass on `main`.
+The fixes are in goat-transformers `main` at commit `8845949` (pull request
+11), with tests (26 pass). Stage 4 needs them; this repository pins that
+commit.
 
 ## 1. What worked
 
@@ -52,16 +52,16 @@ pass on `main`.
 
 ## 3. What the tool got wrong or made awkward, and is fixed
 
-On goat-transformers branch `fix/options-proving`, commit `d8c86af`, in
+In goat-transformers commit `8845949` (pull request 11), in
 `tools/goat-options`, with tests in `tools/tests/test_goat_options.py` and the
 design in `docs/system-records.md` updated.
 
 | # | What was wrong | Shown by | The fix |
 |---|---|---|---|
 | D1 | **A library step was `available` when the library refuses it.** Canonical Track v2 requires `uid`, `track.source_id`, `track.generation` and `time_ms`; Category 062 maps none of them, and the engine raises `no-kind`. The tool listed the step as available with "9 carried". Before the stores were written, 56 ordered pairs of the formats used here were tried on every pack vector of the source: for 22 pairs the library refused every vector, most with `no-kind` on the target. | stage 4; `goat-options paths $S --from tessaline/tr-40 --to velmora/fabric-tracks` | a library step carries `needs`: for each kind of the target, the required keys the source does not supply, counting what the model derives; `null` when some kind can be written. The table marks it. The step is still listed, because a caller can supply the keys. |
-| D2 | **`check` did not list unknown attributes**, though the design says it does. The existing test asserted the old behavior. | `goat-options check $S` on `main` lists `contact` and `topic` and not `port=` or `sample=` | each is listed as `info` |
-| D3 | **`transports_differ` marked every path**, though it is documented for a direct path. On a path with a converter the mark compared the source's transport with the consumer's, which the converter changes anyway: 31 of the 38 paths in the harbor east answer carried it, 29 of them paths with a conversion. | `goat-options site $S sites/harbor-east.site` on `main` | only direct paths are marked |
-| D4 | **Identical rows.** Two owners' claims about the TR-40 gave pairs of rows that looked the same in the table; only the JSON told them apart. The table also hid an unstated direction and a differing transport. | stage 2 table on `main` | two columns: `claims by` (author and version of each end's claim) and `marks` |
+| D2 | **`check` did not list unknown attributes**, though the design says it does. The existing test asserted the old behavior. | `goat-options check $S` at `12a205e` lists `contact` and `topic` and not `port=` or `sample=` | each is listed as `info` |
+| D3 | **`transports_differ` marked every path**, though it is documented for a direct path. On a path with a converter the mark compared the source's transport with the consumer's, which the converter changes anyway: 31 of the 38 paths in the harbor east answer carried it, 29 of them paths with a conversion. | `goat-options site $S sites/harbor-east.site` at `12a205e` | only direct paths are marked |
+| D4 | **Identical rows.** Two owners' claims about the TR-40 gave pairs of rows that looked the same in the table; only the JSON told them apart. The table also hid an unstated direction and a differing transport. | stage 2 table at `12a205e` | two columns: `claims by` (author and version of each end's claim) and `marks` |
 | D5 | **Every table ended with "N problem(s)"**, counting the notes about kept keywords as problems (53 with the stores here). | any `--table` | the footer counts errors, warnings and notes apart |
 
 ## 4. What is awkward and not fixed
