@@ -1,5 +1,10 @@
 # hello-galaxy-coverage-options
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/figures/stores-dark.svg">
+  <img src="docs/figures/stores-light.svg" width="760" alt="A notional vendor and two notional nations each keep their own store of system records; three site files say what is on hand; one query reads all the stores together.">
+</picture>
+
 **A system produces data and another system needs it. In which ways can the
 data get there today or soon, and what is the evidence for each? Ten runnable
 stages use system records and `goat-options` from
@@ -90,11 +95,6 @@ Ubuntu runner.
 Three owners, each with its own store directory. Every `evidence=` and
 `sample=` path is relative to the owner's directory, so a store copied on its
 own keeps its evidence.
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/figures/stores-dark.svg">
-  <img src="docs/figures/stores-light.svg" width="760" alt="A notional vendor and two notional nations each keep their own store of system records; three site files say what is on hand; one query reads all the stores together.">
-</picture>
 
 | Store | Owner | Systems |
 |---|---|---|
